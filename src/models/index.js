@@ -5,10 +5,16 @@ const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const config = require('../../config');
 
-const { database, username, password, host, dialect, port } = config.sequelize;
+const { database, username, password, host, port, dialect, storage } = config.sequelize;
 
 const db = {};
-const sequelize = new Sequelize(database, username, password, { host, dialect, port });
+
+let sequelize;
+if (dialect === 'sqlite') {
+  sequelize = new Sequelize(`sqlite:${storage}`);
+} else {
+  sequelize = new Sequelize(database, username, password, { host, dialect, port });
+}
 
 fs
   .readdirSync(__dirname)
