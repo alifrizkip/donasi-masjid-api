@@ -1,0 +1,22 @@
+{
+  "extends": "airbnb",
+  "rules": {
+      "object-curly-newline":"off",
+      "max-len":"off",
+      "consistent-return":"off",
+      "array-callback-return":"off",
+      "no-param-reassign":0,
+      "no-unused-expressions": ["error", {"allowTernary": true}],
+      "no-return-assign":"warn"
+  },
+  "ecmaFeatures": {
+      "modules": true
+  },
+  "env": {
+      "browser": false,
+      "node": true
+  },
+  "plugins": [
+      "import"
+  ]
+}
