@@ -1,0 +1,1 @@
+web: ./node_modules/.bin/nodemon --exec babel-node src/server.js

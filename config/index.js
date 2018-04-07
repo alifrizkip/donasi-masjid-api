@@ -7,7 +7,7 @@ config.env = process.env.NODE_ENV || 'development';
 process.env.NODE_ENV = config.env;
 
 config.host = 'localhost';
-config.port = 5080;
+config.port = process.env.PORT || 5080;
 config.imagePath = path.join(__dirname, '..', 'public', 'uploads', 'images');
 config.publicPath = path.join(__dirname, '..', 'public');
 
