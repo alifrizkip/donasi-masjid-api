@@ -7,7 +7,9 @@ Array.from(Array(500).keys()).map((n) => {
     email: `hamba_alloh${n}@example.com`,
     amount: 1000 * (n + 1),
     verified: 1,
-    image: null,
+    image: '',
+    created_at: Date.now(),
+    updated_at: Date.now(),
   });
 });
 
