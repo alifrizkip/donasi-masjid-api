@@ -9,8 +9,8 @@ module.exports = {
     address: 'Drono, Ngawen, Klaten',
     image: 'user.jpeg',
     status: 1,
-    created_at: Date.now(),
-    updated_at: Date.now(),
+    created_at: new Date(),
+    updated_at: new Date(),
   }, {
     name: 'Takmir',
     phone: '085723456789',
@@ -19,8 +19,8 @@ module.exports = {
     address: 'Drono, Ngawen, Klaten',
     image: 'user.jpeg',
     status: 1,
-    created_at: Date.now(),
-    updated_at: Date.now(),
+    created_at: new Date(),
+    updated_at: new Date(),
   }], {}),
 
   down: queryInterface => queryInterface.bulkDelete('users', null, {}),

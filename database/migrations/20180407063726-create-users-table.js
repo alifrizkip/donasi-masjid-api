@@ -37,7 +37,7 @@ module.exports = {
       allowNull: false,
     },
     status: {
-      type: Sequelize.TINYINT,
+      type: Sequelize.INTEGER,
       defaultValue: 1,
       allowNull: false,
     },

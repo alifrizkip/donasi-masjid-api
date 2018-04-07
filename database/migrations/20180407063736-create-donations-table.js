@@ -31,7 +31,7 @@ module.exports = {
       allowNull: false,
     },
     verified: {
-      type: Sequelize.TINYINT,
+      type: Sequelize.INTEGER,
       defaultValue: 0,
       allowNull: false,
     },

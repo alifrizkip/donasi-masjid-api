@@ -8,8 +8,8 @@ Array.from(Array(500).keys()).map((n) => {
     amount: 1000 * (n + 1),
     verified: 1,
     image: '',
-    created_at: Date.now(),
-    updated_at: Date.now(),
+    created_at: new Date(),
+    updated_at: new Date(),
   });
 });
 
