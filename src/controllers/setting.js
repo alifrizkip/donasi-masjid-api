@@ -1,11 +1,11 @@
+import Service from '../services/setting';
 import { Setting } from '../models';
 
 export const SettingController = {};
 export default { SettingController };
 
 SettingController.index = async (req, res, next) => {
-  const data = {};
-  (await Setting.findAll()).map(setting => data[setting.key] = setting.value);
+  const data = await Service.getSetting();
   req.resData = { data };
   return next();
 };
