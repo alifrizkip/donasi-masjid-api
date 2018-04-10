@@ -1,9 +1,34 @@
 {
   "name": "donasi-masjid-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "author": "Alif Rizki Pambudi <alifrizkipambudi@gmail.com>",
+  "description": "Backend API Service for Donasi Masjid project. ",
+  "keywords": [
+    "node",
+    "nodejs",
+    "express",
+    "mvc",
+    "postgres",
+    "backend",
+    "api",
+    "service",
+    "boilerplate",
+    "sequelize"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qodrorid/donasi-masjid-api"
+  },
+  "bugs": "https://github.com/qodrorid/donasi-masjid-api/issues",
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon --exec babel-node src/server.js",
+    "sequelize": "babel-node node_modules/.bin/sequelize",
+    "build": "babel src -d build",
+    "start:production": "node build/server.js"
+  },
+  "license": "MIT",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
@@ -47,12 +72,5 @@
     "eslint-plugin-react": "^7.7.0",
     "nodemon": "^1.15.1",
     "sqlite3": "^4.0.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/nodemon --exec babel-node src/server.js",
-    "sequelize": "babel-node node_modules/.bin/sequelize"
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }
